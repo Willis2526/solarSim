@@ -1,0 +1,35 @@
+devices:
+  checkMeters:
+    - name: checkMeter1
+  feederBreakers:
+    - connections:
+        inverters:
+          - inverter1
+          - inverter2
+      name: feeder1Breaker
+    - connections:
+        inverters:
+          - inverter3
+          - inverter4
+      name: feeder2Breaker
+  inverters:
+    - name: inverter1
+    - name: inverter2
+    - name: inverter3
+    - name: inverter4
+  mainBreakers:
+    - connections:
+        feederBreakers:
+          - feeder1Breaker
+          - feeder2Breaker
+        transformers:
+          - transformer1
+      name: mainBreaker1
+  transformers:
+    - connections:
+        feederBreakers:
+          - feeder1Breaker
+          - feeder2Breaker
+      name: transformer1
+unreal:
+  solarPath:
